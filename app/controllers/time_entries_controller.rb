@@ -114,6 +114,7 @@ class TimeEntriesController < ApplicationController
       @time_entries = @time_entries.where(user: current_user) unless @admin
 
       # If there's a date, make sure all time entries are from that date
+      # Default to today
       @date = params[:date] ? Date.parse(params[:date]) : Date.today
       @time_entries = @time_entries.filter_by_date(@date)
 

@@ -155,9 +155,13 @@ form.button_to {
 }
 
 .cursor-tooltip {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .label {
   margin-right: 5px;
+}
+
+tr.overrun {
+    background: lighten($red, 40%);
 }
